@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 255, 246);
+    height: 100vh;
+}
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: rgb(126, 126, 126);
+    box-shadow: 10px 10px 50px black;
+}
+.clip{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    
+}
+.clip1{
+    background: url(https://images.pexels.com/photos/37290569/pexels-photo-37290569.jpeg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
+    box-shadow: 5px 5px 10px rgb(178, 233, 255);
+    
+}
+.clip2{
+    background: url(https://images.pexels.com/photos/36199683/pexels-photo-36199683.jpeg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+    box-shadow: 5px 5px 10px rgb(178, 233, 255);
+
+}
+.clip3{
+    background: url(https://images.pexels.com/photos/37149632/pexels-photo-37149632.jpeg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    
+   clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+   box-shadow: 5px 5px 10px rgb(178, 233, 255);
+
+}
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover{
+    clip-path: polygon(0 0,100% 0,100% 100% ,0% 100%);
+}
